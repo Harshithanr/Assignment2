@@ -5,7 +5,7 @@ package com.ito.assignment.numtowords;
 public class NumToWords {
  
    public static void main(String[] args) {
-	int number = 10000;	  
+	int number = 10500;	  
 	   
 		   System.out.print("Number in words: " + convert(number));
 	   

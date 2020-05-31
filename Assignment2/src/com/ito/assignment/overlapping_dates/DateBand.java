@@ -8,7 +8,6 @@ public class DateBand {
 	public LocalDate startDate;
 	public LocalDate endDate;
 	public DateBand(LocalDate startDate,LocalDate endDate) {
-		super();
 		this.startDate=startDate;
 		this.endDate=endDate;
 	}
@@ -44,7 +43,7 @@ public class DateBand {
 			return db3;	
 		}
 	}
-	@Override
+	
 	public String toString() {
 		return "DateBand [startDate=" + startDate + ", endDate=" + endDate + "]";
 	}

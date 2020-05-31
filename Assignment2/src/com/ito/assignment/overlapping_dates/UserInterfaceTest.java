@@ -29,7 +29,7 @@ class UserInterfaceTest {
 	}
 	
 	@Test
-	public void shouldRaiseAnException() throws UserException {
+	public void RaiseAnException() throws UserException {
 	    Assertions.assertThrows(UserException.class, () -> {
 	    	DateBand db1 = new DateBand(LocalDate.of(2020, Month.JANUARY, 1), LocalDate.of(2020, Month.JANUARY, 15));
 			DateBand db2 = new DateBand(LocalDate.of(2020, Month.JANUARY, 16), LocalDate.of(2020, Month.FEBRUARY, 20));
