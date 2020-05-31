@@ -14,7 +14,7 @@ public class NumToWords {
    public static String convert(int number) {
         // variable to hold string representation of number 
         String words = "";
-        String unitsArray[] = { "zero", "one", "two", "three", "four", "five", "six", 
+        String unitsArray[] = { "", "one", "two", "three", "four", "five", "six", 
                       "seven", "eight", "nine", "ten", "eleven", "twelve",
                       "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", 
                       "eighteen", "nineteen" };
@@ -42,12 +42,11 @@ public class NumToWords {
 	}
  
 	if (number > 0) {
-	     // check if number is within teens
+	   
 	     if (number < 20) { 
-                    // fetch the appropriate value from unit array
                     words += unitsArray[number];
              } else { 
-                // fetch the appropriate value from tens array
+                
                 words += tensArray[number / 10]; 
                 if ((number % 10) > 0) {
 		    words += "-" + unitsArray[number % 10];

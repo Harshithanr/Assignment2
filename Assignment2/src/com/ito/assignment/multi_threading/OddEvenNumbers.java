@@ -11,8 +11,6 @@ public class OddEvenNumbers {
 		
 		synchronized (this) {
 			while (count < MAX) {
-				
- 
 				while (!odd) {
 					try {
 						
@@ -36,8 +34,6 @@ public class OddEvenNumbers {
 		
 		synchronized (this) {
 			while (count < MAX) {
-				
- 
 				while (odd) {
 					try {
 						
@@ -56,29 +52,24 @@ public class OddEvenNumbers {
 		}
 	}
  
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
  
 		OddEvenNumbers oep = new OddEvenNumbers();
 		oep.odd = true;
 		Thread t1 = new Thread(new Runnable() {
  
-			
 			public void run() {
 				oep.printEven();
- 
 			}
 		});
+		
 		Thread t2 = new Thread(new Runnable() {
- 
 		public void run() {
 			oep.printOdd();
- 
 			}
 		});
- 
+	
 		t1.start();
 		t2.start();
- 
- 
 	}
 }
